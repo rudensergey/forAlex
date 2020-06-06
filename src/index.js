@@ -24,28 +24,6 @@ const outputExample = [
     },
     {
         tableName: "Первая делегация",
-        persons: [
-            "Sergey, Gruzin",
-            "Ivan, Russkii",
-            "Ivan, Russkii",
-            "Ivan, Russkii",
-        ],
-    },
-    {
-        tableName: "Первая делегация",
-        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
-    },
-    {
-        tableName: "Первая делегация",
-        persons: [
-            "Sergey, Gruzin",
-            "Ivan, Russkii",
-            "Sergey, Gruzin",
-            "Ivan, Russkii",
-        ],
-    },
-    {
-        tableName: "Первая делегация",
         persons: ["Sergey, Gruzin", "Ivan, Russkii"],
     },
 ];
