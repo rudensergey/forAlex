@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 // ПРЕЖДЕ ЧЕМ НАЧАТЬ РАБОТАТЬ
 
@@ -19,11 +20,29 @@ const outputExample = [
     },
     {
         tableName: "Первая делегация",
-        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+        persons: ["Sergey, Gruzin"],
+    },
+    {
+        tableName: "Первая делегация",
+        persons: [
+            "Sergey, Gruzin",
+            "Ivan, Russkii",
+            "Ivan, Russkii",
+            "Ivan, Russkii",
+        ],
     },
     {
         tableName: "Первая делегация",
         persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+    },
+    {
+        tableName: "Первая делегация",
+        persons: [
+            "Sergey, Gruzin",
+            "Ivan, Russkii",
+            "Sergey, Gruzin",
+            "Ivan, Russkii",
+        ],
     },
     {
         tableName: "Первая делегация",
@@ -55,12 +74,12 @@ class App extends React.Component {
         return (
             <div className="container">
                 {this.state.data.map((a) => (
-                    <div>
-                        <h1>{a.tableName}</h1>
+                    <div className="container__position">
+                        <h1 className="container__table">{a.tableName}</h1>
 
                         <ol>
                             {a.persons.map((p) => (
-                                <li>{p}</li>
+                                <li className="container__name">{p}</li>
                             ))}
                         </ol>
                     </div>

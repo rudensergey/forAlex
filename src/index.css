@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: rgb(207, 222, 240);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto);
+    grid-gap: 20px;
+}
+
+.container__position {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.13);
+    background-color: white;
+}
+
+.container__table {
+    height: min-content;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(37, 37, 37);
+}
+
+.container__name {
+	margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(90, 90, 90);
+}
