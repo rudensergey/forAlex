@@ -1,17 +1,78 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+
+// ПРЕЖДЕ ЧЕМ НАЧАТЬ РАБОТАТЬ
+
+// cd for-alex
+// npm install
+// npm start
+// далее в режиме онлайн можешь редактировать компонент и смотреть output
+
+// в этом файле будут храниться данные
+import { delegators } from "./data";
+
+// outpuExample - это то, что от тебя хочет получить компонент, что бы отобразить все на экране.
+const outputExample = [
+    {
+        tableName: "Первая делегация",
+        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+    },
+    {
+        tableName: "Первая делегация",
+        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+    },
+    {
+        tableName: "Первая делегация",
+        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+    },
+    {
+        tableName: "Первая делегация",
+        persons: ["Sergey, Gruzin", "Ivan, Russkii"],
+    },
+];
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { data: outputExample };
+    }
+
+    componentDidMount = () => {
+        // Здесь ты пишешь всю логику, если хочешь - можешь вынести ее за компонент
+        let result = [];
+        // Помести все объекты в массив result
+        let data = delegators;
+        // Delegators - это обхект даты с файла data, бери данные только с него
+
+        // МЕСТО ДЛЯ КОДА
+
+        // Ниже ничего не трогай :)
+        result.length || (result = outputExample);
+        this.setState({ data: result });
+    };
+
+    render() {
+        return (
+            <div className="container">
+                {this.state.data.map((a) => (
+                    <div>
+                        <h1>{a.tableName}</h1>
+
+                        <ol>
+                            {a.persons.map((p) => (
+                                <li>{p}</li>
+                            ))}
+                        </ol>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById("root")
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
